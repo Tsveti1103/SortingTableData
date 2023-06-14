@@ -1,7 +1,17 @@
 import { useAuthContext } from "../../contexts/AuthContext";
+import { useOrderContext } from "../../contexts/OrderContext";
+import Orders from "../Oders/Orders";
 
 export default function Home() {
-    return(
-        <h1>Home</h1>
+    const { isAuthenticated } = useAuthContext();
+    return (
+        <>
+            {isAuthenticated ?
+                <Orders />
+                :
+                <h1>Welcome to Ebag admin page</h1>
+            }
+        </>
     )
+
 }
