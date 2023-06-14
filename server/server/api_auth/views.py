@@ -13,10 +13,6 @@ class RegisterApiView(rest_generic_views.CreateAPIView):
     serializer_class = CreateUserSerializer
 
 
-# class DeleteApiView(rest_generic_views.DestroyAPIView):
-#     queryset = UserModel.objects.all()
-
-
 class LoginApiView(authtoken_views.ObtainAuthToken):
     def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data,
@@ -46,9 +42,3 @@ class LogoutApiView(rest_views.APIView):
         return Response({
             'message': 'User logged out'
         })
-
-
-# class UpdateProfileView(rest_generic_views.UpdateAPIView):
-#     queryset = UserModel.objects.all()
-#     permission_classes = (IsAuthenticated,)
-#     serializer_class = UpdateUserSerializer
