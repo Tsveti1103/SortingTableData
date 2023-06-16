@@ -1,5 +1,4 @@
-import { createContext, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { createContext, useContext, useState } from "react";
 
 import * as itemService from "../services/itemService";
 
@@ -9,19 +8,15 @@ export const OrderContext = createContext();
 export const OrderProvider = ({
   children,
 }) => {
-  const navigate = useNavigate();
-
   const deleteOrder = (orderId,setOrders) => {
     itemService.deleteOrder(orderId)
     setOrders(state => state.filter(x => x.id !== orderId))
-    navigate('/');
   };
 
-  const editOrder = async (data, orderId,setOrders) => {
+  const editOrder = async (data, orderId, setOrders) => {
     try {
       const result = await itemService.editOrder(orderId, data)
       setOrders(state => state.map(x => x.id === orderId ? result : x));
-      navigate(`/`);
     }
     catch (err) {
       throw err

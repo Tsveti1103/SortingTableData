@@ -1,0 +1,82 @@
+.modalBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #158e8d;
+    border-radius: 1rem;
+    position: relative;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+
+}
+
+button.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: black;
+    font-size: 1.5rem;
+}
+
+button.close span:hover {
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0 0.5rem;
+}
+
+.modalBtns {
+    display: flex;
+    gap: 2rem;
+    /* margin: 1rem; */
+}
+
+button.closeBtn,
+button.actionBtn {
+    border-radius: 1rem;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    color: black;
+}
+
+button.closeBtn {
+    background-color: green;
+}
+
+button.actionBtn {
+    background-color: red;
+
+}
+
+button.closeBtn:hover,
+button.actionBtn:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+.modalBody {
+    background-color: #034948;
+    border-radius: 1rem;
+    width: 70%;
+}
+
+
+/* Form */
+
+.form {
+    margin-bottom: 1rem;
+}
+
+.form input {
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: 2px solid rgba(12, 43, 76, 0.5);
+}

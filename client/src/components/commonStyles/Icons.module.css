@@ -1,0 +1,12 @@
+.not{
+    color: red;
+}
+
+.do{
+    color: darkgreen;
+}
+
+.container{
+    display: flex;
+    gap: 1rem;
+}

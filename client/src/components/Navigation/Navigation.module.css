@@ -1,8 +1,6 @@
 .header {
-  position: sticky;
   top: 0;
   min-height: 10vh;
-  z-index: 1;
   width: 100vw;
 }
 
@@ -23,7 +21,6 @@
   color: #158e8d;
   font-size: 2rem;
   font-weight: bold;
-  z-index: 2;
   position: relative;
   max-width: 80px;
 }
@@ -87,7 +84,6 @@
   .navbar ul.links {
     position: fixed;
     background: #080808;
-    z-index: 1;
     top: 0;
     right: 0;
     flex-direction: column;
