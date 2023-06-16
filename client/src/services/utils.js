@@ -1,6 +1,4 @@
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import CreditCardIcon from '@mui/icons-material/CreditCard';
-import ReceiptIcon from '@mui/icons-material/Receipt';
+import { MonetizationOn, CreditCard, Receipt } from '@mui/icons-material'
 import { Tooltip } from '@mui/material';
 
 
@@ -39,17 +37,17 @@ export function formIsValid(data) {
 export function payment(paymentMethod) {
     if (paymentMethod === "CASH") {
         return (<Tooltip title='Cash'>
-            <MonetizationOnIcon />
+            <MonetizationOn />
         </Tooltip>)
     }
     else if (paymentMethod === "CARD") {
         return (<Tooltip title='Card'>
-            <CreditCardIcon />
+            <CreditCard />
         </Tooltip>)
     }
     else if (paymentMethod === "INVOICE") {
         return (<Tooltip title='Invoice'>
-            <ReceiptIcon />
+            <Receipt />
         </Tooltip>)
     }
 }

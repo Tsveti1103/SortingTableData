@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import { useAuthContext } from "../../contexts/AuthContext";
-import { useOrderContext } from "../../contexts/OrderContext";
 import Orders from "../Oders/Orders";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
             {isAuthenticated ?
                 <Orders />
                 :
-                <h1>Welcome to Ebag admin page</h1>
+                <h1>Welcome to admin page. Pleace <Link to="/login" style={{  'text-decoration': 'none',color:'#158e8d' }}>login</Link> to view orders.</h1>
             }
         </>
     )

@@ -1,5 +1,5 @@
 import { Delete } from "@mui/icons-material";
-import { Box, Button, IconButton, Modal, Tooltip, Typography } from "@mui/material";
+import { Box, Button, Dialog, IconButton, Tooltip, Typography } from "@mui/material";
 import { useOrderContext } from "../../contexts/OrderContext";
 import modalStyles from '../commonStyles/modal.module.css';
 import useModal from "../../hooks/useModal";
@@ -20,12 +20,12 @@ export default function DeleteOrder({ currentRow, setOrders }) {
                     <Delete></Delete>
                 </IconButton>
             </Tooltip>
-            <Modal
+            <Dialog
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
-                className={modalStyles.modal}
+                scroll="body"
             >
                 <Box className={modalStyles.modalBox}>
                     <Button className={modalStyles.close} onClick={handleClose}><span>&#10005;</span></Button>
@@ -40,7 +40,7 @@ export default function DeleteOrder({ currentRow, setOrders }) {
                         <Button onClick={onDelete} className={modalStyles.actionBtn}>Delete</Button>
                     </div>
                 </Box>
-            </Modal>
+            </Dialog>
         </>
     )
 }

@@ -3,19 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #158e8d;
-    border-radius: 1rem;
     position: relative;
     padding: 2rem;
     gap: 2rem;
-}
-
-.modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: scroll;
-
+    background-color: #158e8d;
 }
 
 button.close {
@@ -35,7 +26,6 @@ button.close span:hover {
 .modalBtns {
     display: flex;
     gap: 2rem;
-    /* margin: 1rem; */
 }
 
 button.closeBtn,
@@ -62,21 +52,47 @@ button.actionBtn:hover {
     color: black;
 }
 
-.modalBody {
-    background-color: #034948;
-    border-radius: 1rem;
-    width: 70%;
-}
-
-
 /* Form */
 
-.form {
+div.form {
     margin-bottom: 1rem;
+    display: flex;
+    gap: 1.25rem;
+    text-align: center;
+    background-color: #158e8d;
+    border-radius: 1rem;
+    padding: 2rem;
 }
 
 .form input {
     border-radius: 0.5rem;
     background-color: transparent;
     border: 2px solid rgba(12, 43, 76, 0.5);
+}
+
+.chckbox {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.select label {
+    position: relative;
+}
+
+.textarea {
+    background-color: transparent;
+    resize: none;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

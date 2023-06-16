@@ -4,6 +4,7 @@ import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import * as itemService from "../../services/itemService";
 import useFetcherCustom from "../../hooks/useFetcher";
 import { takeColomns } from '../../tableUtils/tableColumns'
+
 export default function Orders() {
     const [orders, setOrders] = useFetcherCustom(itemService.getAllOrders, []);
     const [paginationModel, setPaginationModel] = useState({
@@ -30,7 +31,7 @@ export default function Orders() {
             params.indexRelativeToCurrentPage % 2 === 0 ? 'even' : 'odd'
     }
     return (
-        <Box sx={{ width: '94vw', }}>
+        <Box>
             <Typography
                 variant="h3"
                 content="h3"
