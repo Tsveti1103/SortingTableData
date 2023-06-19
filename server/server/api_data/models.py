@@ -13,7 +13,7 @@ class Orders(models.Model):
         max_length=MAX_CLIENT_NAME_LENGTH,
         null=False,
         blank=False,
-        unique=True,
+        unique=False,
     )
 
     details = models.TextField()
