@@ -11,6 +11,13 @@ export default function Orders() {
         pageSize: 5,
         page: 0,
     });
+    const columnGroupingModel = [
+        {
+            groupId: 'Additional',
+            headerName: 'Additional Info',
+            description: '',
+            children: [{ field: 'paid'}, {field: 'new_client'},{field: 'refused'},{field: 'finished'},{field: 'payment_method'} ],
+        }]
     const columns = takeColomns(setOrders)
     const dataGrilOpt = {
         paginationModel: paginationModel,
@@ -19,6 +26,8 @@ export default function Orders() {
         editMode: "row",
         rows: orders,
         columns: columns,
+        experimentalFeatures:{ columnGrouping: true },
+        columnGroupingModel:columnGroupingModel,
         slots: { toolbar: GridToolbar, },
         slotProps: {
             toolbar: {

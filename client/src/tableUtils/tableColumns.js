@@ -54,12 +54,62 @@ export function takeColomns(setOrders) {
         valueFormatter: params =>
             moment(params?.value).format("DD/MM/YYYY"),
     }
-    const additionalFieldOpt = {
-        field: 'additional',
-        headerName: 'Additional Information',
-        align: 'left',
+
+    // const additionalFieldOpt = {
+    //     field: 'additional',
+    //     headerName: 'Additional Information',
+    //     align: 'left',
+    //     headerAlign: 'center',
+    //     width: 200,
+    //     renderCell: (params) =>
+    //         <Additional {...{ params }} />
+    // }
+    const paidFieldOpt = {
+        field: 'paid',
+        headerName: 'Paid status',
+        align: 'center',
         headerAlign: 'center',
-        width: 200,
+        width: 100,
+        type: "boolean",
+        renderCell: (params) =>
+            <Additional {...{ params }} />
+    }
+    const newClientFieldOpt = {
+        field: 'new_client',
+        headerName: 'New Client',
+        align: 'center',
+        headerAlign: 'center',
+        width: 100,
+        type: "boolean",
+        renderCell: (params) =>
+            <Additional {...{ params }} />
+    }
+    const refusedFieldOpt = {
+        field: 'refused',
+        headerName: 'Refused',
+        align: 'center',
+        headerAlign: 'center',
+        width: 100,
+        type: "boolean",
+        renderCell: (params) =>
+            <Additional {...{ params }} />
+    }
+    const finishedFieldOpt = {
+        field: 'finished',
+        headerName: 'Finished',
+        align: 'center',
+        headerAlign: 'center',
+        width: 100,
+        type: "boolean",
+        renderCell: (params) =>
+            <Additional {...{ params }} />
+    }
+    const PaymentMethodFieldOpt = {
+        field: 'payment_method',
+        headerName: 'Payment method',
+        align: 'center',
+        headerAlign: 'center',
+        width: 100,
         renderCell: (params) =>
             <Additional {...{ params }} />
     }
@@ -80,8 +130,13 @@ export function takeColomns(setOrders) {
         { ...priceFieldOpt },
         { ...creationDateFieldOpt },
         { ...deliveryDateFieldOpt },
-        { ...additionalFieldOpt },
-        { ...actionsFieldOpt }
+        { ...paidFieldOpt },
+        { ...newClientFieldOpt },
+        { ...refusedFieldOpt },
+        { ...finishedFieldOpt },
+        { ...PaymentMethodFieldOpt },
+        // { ...additionalFieldOpt },
+        { ...actionsFieldOpt },
     ];
     return columns
 }

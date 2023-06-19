@@ -6,7 +6,10 @@
 *::after {
   box-sizing: border-box;
 }
-
+/* Table header names */
+.MuiDataGrid-columnHeaderTitleContainer{
+  justify-content: center;
+}
 .modal-open {
   overflow: hidden;
 }
