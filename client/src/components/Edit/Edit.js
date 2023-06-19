@@ -47,7 +47,7 @@ export default function EditOrder({ currentRow, setOrders }) {
                             value={values.client_name}
                             onChange={onChangeHandler}
                         />
-                        <label htmlFor="delivery_date">Created date</label>
+                        <label htmlFor="delivery_date">Delivery date</label>
                         <input
                             type="date"
                             name="delivery_date"
